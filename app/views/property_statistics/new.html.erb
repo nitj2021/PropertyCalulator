@@ -1,0 +1,12 @@
+<div id="error_div"></div>
+
+
+<%= simple_form_for @property_statisitc , remote: true do |f| %>
+	<h1>Return on Investment</h1 >
+	<%= f.input :area, label: 'Square feets', hint:  link_to("?","#","data-toggle"=>"tooltip", "title"=>"Living area square feet of property")%>
+	<%= f.input :purchasing_price, label: 'Cost to buy property',hint: "" ,:wrapper_html => { :class => "inline_field_wrapper" }%>
+	<%= f.input :selling_price, label: 'Sale value of property'%>
+	<%= f.submit "Calculate" ,class: "btn"%>
+<% end %>
+
+<div id="result_div"></div>

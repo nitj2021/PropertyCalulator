@@ -1,9 +1,2 @@
-if ("<%=@property_statisitc.errors.any?%>" == "true"){
-	$(".alert").addClass("in")
-	$("#error_div").html('<%= escape_javascript(render(:partial => "error")) %>');
-	$("#result_div").html('');
-}
-else{
-	$("#error_div").html('');
-	$("#result_div").html('<%= escape_javascript(render(:partial => "result")) %>');
-}
+$("#error_div").html('');
+$("#result_div").html('<%= escape_javascript(render(:partial => "result")) %>');

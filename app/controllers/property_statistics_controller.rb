@@ -5,7 +5,11 @@ class PropertyStatisticsController < ApplicationController
 
   def create
   	@property_statisitc = PropertyStatistic.new(create_params)
-  	@property_statisitc.save
+  	if @property_statisitc.save
+      render :create
+    else
+      render :error
+    end
   end
 
   private

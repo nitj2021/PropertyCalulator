@@ -1,11 +1,11 @@
 class PropertyStatisticsController < ApplicationController
   def new
-  	@property_statisitc =	PropertyStatistic.new
+    @property_statisitc = PropertyStatistic.new
   end
 
   def create
-  	@property_statisitc = PropertyStatistic.new(create_params)
-  	if @property_statisitc.save
+    @property_statisitc = PropertyStatistic.new(create_params)
+    if @property_statisitc.save
       render :create
     else
       render :error
@@ -15,7 +15,6 @@ class PropertyStatisticsController < ApplicationController
   private
 
   def create_params
-  	params.require(:property_statistic).permit!
+    params.require(:property_statistic).permit!
   end
-
 end
